@@ -1,9 +1,31 @@
+/**
+ * This file is responsible for interacting with the Chrome extension's clipboard history. 
+ * It displays the clipboard history in the form of a list and provides functionality 
+ * to copy items from the history, save the history to a file, and clear the history.
+ */
+
+
+
+ /** 
+   * Stores the clipboard history returned by the background script.
+   * @type {Array.<object>}
+   */
 var historyList = document.getElementById("historyList");
 
-//get current history
+
+/** 
+ * Asks the background script for the clipboard history using the Chrome runtime messaging API.
+ * @type {object}
+ * @property {string} type - The type of the message, which is "getHistory" in this case.
+ */
 chrome.runtime.sendMessage({type: "getHistory"}, function(response) {
   var history = response.history;
 
+  /**
+   * Iterates through the history array in reverse order, creating and appending list items
+   * to the history list for each clipboard action. Each list item includes a button to copy
+   * the associated clipboard text.
+   */
   for (var i = history.length-1; i >= 0; i--) {
     //List of copy and pastes
     var item = history[i];
@@ -37,10 +59,12 @@ chrome.runtime.sendMessage({type: "getHistory"}, function(response) {
     listItem.appendChild(copyButton);
     historyList.appendChild(listItem);
   }
-
-
-
-  //button to save current history
+  
+   /** 
+   * Gets the save button from the DOM and adds an event listener to it. When clicked,
+   * the save button generates a text file containing the clipboard history and triggers
+   * a download of the file.
+   */
   var saveButton = document.getElementById("txtSaveButton");
   // Add event listener to the save button
   saveButton.addEventListener("click", function() {
@@ -70,7 +94,9 @@ chrome.runtime.sendMessage({type: "getHistory"}, function(response) {
 
 
 
-  // DeleteButton
+  /**
+   * Gets the delete button from the DOM and adds an event listener to it. When clicked,
+   * the delete button clears the clipboard history in the popup.*/
   var deleteButton = document.getElementById("historyDeleteButton");
 
   deleteButton.addEventListener("click", function() {
