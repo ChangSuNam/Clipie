@@ -13,7 +13,10 @@ When you have to copy and paste multiple texts, it is helpful to have a clipboar
 In addition, it allows the user to download the .txt file of their clipboard history. The user can delete their data as well.
 
 # Installation
-  While this extension is being approved in the chrome browser extension market, please download the files in this repository. On your chrome browser, go to : chrome://extensions/ , and click "Load unpacked". Then load the "/src" directory. Now you will be able to use Clipe extension.
+Clipie is currently under review on Google Web Store:
+![image](https://github.com/ChangSuNam/Clipie/assets/25335750/20c881c7-cab6-4b08-826a-d44ec831c28a)
+
+While this extension is being approved in the chrome browser extension market, please download the files in this repository. On your chrome browser, go to : chrome://extensions/ , and click "Load unpacked". Then load the "/src" directory. Now you will be able to use Clipe extension.
   
 ![image](https://github.com/ChangSuNam/Clipie/assets/25335750/911520a7-46a1-41b8-ad98-7875fccb2c05)
 
