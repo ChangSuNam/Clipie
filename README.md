@@ -5,6 +5,7 @@ Chrome extension for clipboard containing recently copied items.
 [![CI](https://github.com/ChangSuNam/Clipie/actions/workflows/ci.yml/badge.svg)](https://github.com/ChangSuNam/Clipie/actions/workflows/ci.yml)
 [![Code coverage](https://img.shields.io/codecov/c/0e1cbeda-0d24-4aca-a796-5b1ead31a787)](https://img.shields.io/codecov/c/github/ChangSuNam/Clipie/main?token=0e1cbeda-0d24-4aca-a796-5b1ead31a787)
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/keamhamnpnlepoeplpmaocjnlbklbaeg)
+https://img.shields.io/github/v/release/ChangSuNam/Clipie
 
 
 # Overview
