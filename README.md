@@ -6,7 +6,7 @@ Chrome extension for clipboard containing recently copied items.
 [![Code coverage](https://img.shields.io/codecov/c/0e1cbeda-0d24-4aca-a796-5b1ead31a787)](https://img.shields.io/codecov/c/github/ChangSuNam/Clipie/main?token=0e1cbeda-0d24-4aca-a796-5b1ead31a787)
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/keamhamnpnlepoeplpmaocjnlbklbaeg)
 ![Github_release](https://img.shields.io/github/v/release/ChangSuNam/Clipie)
-[![Github_pages](https://img.shields.io/badge/Github%20Pages-https%3A%2F%2Fchangsunam.github.io%2FClipie%2F-brightgreen)](https://github.com/ChangSuNam/Clipie/assets/25335750/9736209c-290b-4d17-9872-bc9da0d88abc)
+[![Github_pages](https://img.shields.io/badge/Github%20Pages-https%3A%2F%2Fchangsunam.github.io%2FClipie%2F-brightgreen)](https://changsunam.github.io/Clipie/)
 
 
 
@@ -35,7 +35,7 @@ https://youtu.be/gDXmaDHRT98
 
 
 # Static Website
-Access github pages at: (https://github.com/ChangSuNam/Clipie/assets/25335750/9736209c-290b-4d17-9872-bc9da0d88abc)
+Access github pages at: https://changsunam.github.io/Clipie/
 
 
 
