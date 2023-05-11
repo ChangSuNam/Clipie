@@ -33,6 +33,10 @@ Here is a quick demo to show its full functionality:
 https://youtu.be/gDXmaDHRT98
 
 
+#Static Website
+Access github pages at: (https://github.com/ChangSuNam/Clipie/assets/25335750/9736209c-290b-4d17-9872-bc9da0d88abc)
+
+
 
 
 
