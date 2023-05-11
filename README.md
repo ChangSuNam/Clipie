@@ -22,12 +22,25 @@ While this extension is being approved in the chrome browser extension market, p
   
 ![image](https://github.com/ChangSuNam/Clipie/assets/25335750/911520a7-46a1-41b8-ad98-7875fccb2c05)
 
+# Debugging and testing 
+For testing, install mocha, chai and selenium with the following command on terminal:
+  npm install --save-dev mocha chai selenium-webdriver chromedriver
+
+Tests can be run with "mocha test.js" command in the tests directory.
+
+To debug using extension console, click Clipie's "Inspect views background page (Inactive)" button in chrome://extensions/. 
+
+
 # Usage
 
-Clipie will automatically check if you are copying or pasting texts, and your history will be shown in the extension:
+Clipie will automatically check if you are copying or pasting texts, and your history will be shown in the extension, with the recent data on the top:
 ![image](https://github.com/ChangSuNam/Clipie/assets/25335750/9736209c-290b-4d17-9872-bc9da0d88abc)
 
-You can copy the texts from your history again using the Copy button.
+You can copy any of the texts from your history again using the Copy button located next to the text.
+
+You can download the .txt file of your text with the "download as .txt" button.
+
+You can delete the whole history with "delete my history" button.
 
 
 Here is a quick demo to show its full functionality:
