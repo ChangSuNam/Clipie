@@ -1,33 +1,68 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked. 
- ("browser_action" field in "manifest.json" contains the "default_popup" key with
- value "popup.html") -->
+
 <html>
-  <head>
-    <title>Clipie</title>
-    <style>
-      body {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 100%;
-      }
-     
-    </style>
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
-  </head>
-  <body>
-    <p>Add paste contents herer</p>
 
-    <div class ="copy"> </div>
-    <div class = "paste"> </div>
+<head>
+  <title>Clipie</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 100%;
+      width: 500px;
+      background-color: #FAE29C;
+    }
 
-    <script src="script.js"></script>
+    #historyList {
+      font-size: 80%;
+      padding: 10px;
+    }
 
-  </body>
+    #historyList li {
+      padding: 5px;
+      margin-bottom: 30px;
+      border-radius: 5px;
+    }
+    .copiedText {
+      color: navy;
+      font-weight: bold;
+
+    }
+    .pastedText {
+      color: violet;
+      font-weight: bold;
+    }
+    .copyButton{
+      color: black;
+      background-color: white;
+      font-size: 14px;
+      border-radius: 12px;
+      float: right;
+    }
+    
+    .buttons {
+      color: white;
+      background-color: black;
+      font-size: 14px;
+      border-radius: 12px;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <h3><img src="assets/icon.png" alt="Logo" style="width: 20px;">Clipie </h3>
+  <p>Your recent clipboard history:</p>
+  <ul id="historyList"></ul>
+
+  <button class="buttons" id="txtSaveButton">Save as .txt</button>
+  <button class="buttons" id="historyDeleteButton">Delete my history</button>
+
+
+  <script src="popup.js"></script>
+
+</body>
+
 </html>
