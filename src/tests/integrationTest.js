@@ -10,7 +10,7 @@ describe('Clipie Chrome Extension Test', function () {
 
     before(async function() {
         let options = new chrome.Options();
-        options.addArguments('load-extension=' + path.resolve(__dirname, '/Users/swu/Documents/Columbia University/Spring 2023/COMS 4995 Open Source Software/project/Clipie/src')); 
+        options.addArguments('load-extension=' + path.resolve(__dirname, '/Users/swu/Documents/Columbia University/Spring 2023/COMS 4995 Open Source Software/Clipie/src')); 
         driver = await new Builder().forBrowser('chrome').setChromeOptions(options).build();
 
         // Open a new tab and switch to it
