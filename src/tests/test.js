@@ -1,3 +1,12 @@
+/**
+ * Tests for Clipboard Chrome Extension.
+ * 
+ * This script uses selenium-webdriver to test the functionality
+ * of the Clipie Chrome extension.
+ * 
+ * @file
+ */
+
 const assert = require('assert');
 const { Builder, By, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
@@ -14,8 +23,11 @@ options.addArguments([
 describe('Clipboard Chrome Extension Test', function() {
     this.timeout(50000);
     let driver;
-
+  
     beforeEach(async function() {
+       /**
+         * Sets up the Chrome driver before each test.
+         */
         driver = await new Builder()
             .forBrowser('chrome')
             .setChromeOptions(options)
@@ -23,10 +35,16 @@ describe('Clipboard Chrome Extension Test', function() {
     });
 
     afterEach(async function() {
+        /**
+         * Quits the Chrome driver after each test.
+         */
         await driver.quit();
     });
 
     it('should open the extension popup', async function() {
+       /**
+         * Test to check if the extension popup opens correctly.
+         */
         // Open a new tab to initialize the Chrome extension
         await driver.get('chrome://newtab');
         
@@ -38,7 +56,9 @@ describe('Clipboard Chrome Extension Test', function() {
         assert.equal(title, 'Clipie');
     });
 
-    // Removed the copy and paste test, as it's not possible to simulate clipboard events in this context
+        /**
+         * Test to check if the extension shows history correctly.
+         */
 
     it('should show history', async function() {
         // Open the extension popup
@@ -51,7 +71,7 @@ describe('Clipboard Chrome Extension Test', function() {
         const historyList = await driver.findElement(By.id('historyList'));
         assert.ok(await historyList.isDisplayed());
     });
-
+     
     it('should copy and paste text', async function() {
       await driver.get('https://www.google.com');
       await driver.findElement(By.name('q')).sendKeys('Hello World');
@@ -79,6 +99,10 @@ describe('Clipboard Chrome Extension Test', function() {
       let secondItem = await historyItems[1].getText();
       assert(secondItem.includes('Pasted: \'Hello World\''));
     });
+
+     /**
+         * Test to check if the extension popup deletes history correctly.
+         */
     
     it('should clear clipboard history', async function() {
       await driver.get('chrome-extension://giffbkijnobblneabpeincocfimkgdao/popup.html');
