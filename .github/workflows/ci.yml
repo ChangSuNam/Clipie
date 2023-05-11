@@ -21,15 +21,17 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install
-          npm install mocha selenium-webdriver
+          npm install -g mocha chai selenium-webdriver chromedriver 
 
+      - name: Install eslint and plugins
+        run: |
+          npm install -g eslint eslint-config-google eslint-plugin-jsdoc
+      
       - name: Build and test extension
         env:
           CHROME_BIN: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
         run: |
-          npm run build
-          npm run test
+           mocha src/tests/test.js
 
       - name: Upload coverage to codecov
         uses: codecov/codecov-action@v2.1.0
